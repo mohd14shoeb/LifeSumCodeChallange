@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="LifesumCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULX-RK-Mz9" customClass="CaloriesCircleView" customModule="LifesumCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="375" height="424"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="424" id="XyX-Xt-8S9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oV7-xB-oXc">
+                                <rect key="frame" x="44" y="543" width="287" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLA-5M-n6C">
+                                        <rect key="frame" x="1" y="1" width="285" height="88"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="MORE INFO">
+                                            <fontDescription key="titleFontDescription" name="Avenir-Light" family="Avenir" pointSize="29"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdT-vX-dAR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CLA-5M-n6C" secondAttribute="trailing" constant="1" id="IPp-yx-zFS"/>
+                                    <constraint firstItem="CLA-5M-n6C" firstAttribute="leading" secondItem="oV7-xB-oXc" secondAttribute="leading" constant="1" id="SD7-Lg-LDA"/>
+                                    <constraint firstAttribute="height" constant="90" id="XEd-RR-elt"/>
+                                    <constraint firstAttribute="width" constant="287" id="c0D-DU-mtz"/>
+                                    <constraint firstItem="CLA-5M-n6C" firstAttribute="top" secondItem="oV7-xB-oXc" secondAttribute="top" constant="1" id="ccZ-ph-ksL"/>
+                                    <constraint firstAttribute="bottom" secondItem="CLA-5M-n6C" secondAttribute="bottom" constant="1" id="eyc-Kp-PIs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ULX-RK-Mz9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="59P-iw-fW8"/>
+                            <constraint firstItem="ULX-RK-Mz9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="JTc-K9-fHr"/>
+                            <constraint firstItem="oV7-xB-oXc" firstAttribute="centerX" secondItem="ULX-RK-Mz9" secondAttribute="centerX" id="aX5-K3-BO4"/>
+                            <constraint firstItem="ULX-RK-Mz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rUP-Ug-bqJ"/>
+                            <constraint firstItem="oV7-xB-oXc" firstAttribute="top" secondItem="ULX-RK-Mz9" secondAttribute="bottom" constant="25" id="x6f-wY-c5b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonShadowView" destination="oV7-xB-oXc" id="1gZ-er-Knj"/>
+                        <outlet property="caloriesCircleView" destination="ULX-RK-Mz9" id="gEA-Ca-OYa"/>
+                        <outlet property="moreInfoButton" destination="CLA-5M-n6C" id="1QX-R2-PRQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.399999999999999" y="97.536945812807886"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="kZf-G6-IsS">
+            <objects>
+                <viewController storyboardIdentifier="CollectionViewController" id="pyh-Wa-3Of" customClass="CollectionViewController" customModule="LifesumCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0g-6n-PnW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-Lk-FQq">
+                                <rect key="frame" x="0.0" y="173" width="375" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="CfP-h8-L4V"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ooa-p0-Sfn">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p0G-UT-Zwq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NsM-WV-c98">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AI1-5x-CQA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IGz-Lk-FQq" firstAttribute="trailing" secondItem="AI1-5x-CQA" secondAttribute="trailing" id="WRL-Dp-BQV"/>
+                            <constraint firstItem="IGz-Lk-FQq" firstAttribute="top" secondItem="AI1-5x-CQA" secondAttribute="top" constant="129" id="fp2-PZ-YB0"/>
+                            <constraint firstItem="IGz-Lk-FQq" firstAttribute="leading" secondItem="AI1-5x-CQA" secondAttribute="leading" id="l3T-mx-0w5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="IGz-Lk-FQq" id="npV-2c-eIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqy-cW-pae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
